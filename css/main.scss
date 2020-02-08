@@ -1,0 +1,110 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+#wrraper {
+    max-width: 1440px;
+    margin: auto auto;
+    padding: 3rem 4rem;
+    background-color: hsl(0, 0%, 98%);
+   
+        #header {
+            text-align: center;
+                #title1{
+                    @extend %tytle-style;
+                    font-weight: 200;
+                    
+            }
+                 #title2 {
+                    @extend %tytle-style;
+                    font-weight: 600;
+                     
+            }
+                #parag{
+                    font-weight: 200;
+                    font-style: normal;
+                    font-size: 1.2rem;
+                    margin: 1.66rem;
+                    color: hsl(229, 6%, 66%);
+                    
+                }
+
+     } 
+      
+        #content {
+            display: grid;
+            grid-template-columns: 0.65fr 0.65fr 0.65fr;
+             grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-gap: 1.66rem;
+            border-radius: 8px;
+            .card{
+                padding: 2rem;
+                border-radius: 10px;
+                background-color: white;
+                box-shadow: 0px 10px 24px hsl(229, 6%, 66%);
+                .title-card {
+                    font-weight: 600;
+                    font-style: normal;
+                    font-size: 1.66rem;
+                    margin-bottom: 1rem;
+                    color: hsl(234, 12%, 34%);
+                }
+                
+                .parag-card {
+                    margin-bottom: 3rem;
+                    color: hsl(229, 6%, 66%);
+                    }  
+                img {
+                        float: right;
+                    
+                    }
+
+            }    
+                #super {
+                    @extend %row-line;
+                    grid-column: 1/2;
+                    border-top: 5px solid hsl(180, 62%, 55%);
+                
+                }
+                #team {
+                    @extend %column-line;
+                    grid-row: 1/3;
+                    border-top: 5px solid hsl(0, 78%, 62%);
+                }
+                
+                #karma {
+                    @extend %column-line;
+                    grid-row: 3/5;
+                    border-top: 5px solid hsl(34, 97%, 64%);
+                }
+                
+                #calcu{
+                    @extend %row-line;
+                    grid-column: 3/4;
+                    border-top: 5px solid hsl(212, 86%, 64%);
+                }
+              
+        }
+
+  }
+
+  /*class to extend */
+
+%column-line {
+    grid-column: 2/3;
+}
+
+%row-line {
+    grid-row: 2/4;
+}
+
+%tytle-style {
+    font-style: normal;
+    color: hsl(234, 12%, 34%);
+    font-size: 2.66rem;
+}
